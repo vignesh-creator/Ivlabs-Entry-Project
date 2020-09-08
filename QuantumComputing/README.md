@@ -1,5 +1,5 @@
 # QuantumComputing
-A simple project of entanglement between three qubits
+A simple project of entanglement between three qubits.
 But the noticable thing is that I've two plots saved as .png files
 First one is generated normally by the simulator in a classical Computer, you can
 recognise it its plotted for only two logics 000 and 011
@@ -16,3 +16,5 @@ Seconds
 the time duration is based on the que how many developers are accessing
 
 I will seperately put a Code to how to access IBMQ's Quantum Computer within our code
+
+note that the the probabilites vary from computation to computation
