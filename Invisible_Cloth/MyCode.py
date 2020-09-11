@@ -1,9 +1,10 @@
 import numpy as np
 import cv2
-out = cv2.VideoWriter('vid.avi',cv2.VideoWriter_fourcc(*'DIVX'),20.0,(640, 480))
 cap = cv2.VideoCapture(0)
-bg=0
-count=0
+wid=int(cap.get(3))
+height=int(cap.get(4))
+size=(wid,height)
+out = cv2.VideoWriter('vid.avi',cv2.VideoWriter_fourcc(*'DIVX'),20,size)
 if not cap.isOpened():
     print("Cannot Open Camera")
     exit()
@@ -17,7 +18,6 @@ while (True):
     if ret == False:
         print("Can't receive frame")
         break
-    count = count + 1
     frame = np.flip(frame, axis=1)
     bgr_hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
     lower = np.array([94, 80, 2])
